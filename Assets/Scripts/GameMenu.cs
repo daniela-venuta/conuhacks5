@@ -10,6 +10,6 @@ public class GameMenu : MonoBehaviour
         GetComponent<Button>().onClick.AddListener(TaskOnClick);
     }
   void TaskOnClick()   {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("YeetHaw");
     }
 }
