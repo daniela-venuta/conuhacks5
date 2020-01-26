@@ -58,6 +58,6 @@ public class SpawnClothing : MonoBehaviour
 
    GameObject getObjectPrefab()
    {
-      return objectPrefabArr[Random.Range(0,2)];
+      return objectPrefabArr[Random.Range(0,3)];
    }
 }
