@@ -1,4 +1,4 @@
-# ConUHacks V
+# YeetHaw! at ConUHacks V
 An augmented reality game meant to fulfill the Unity AR challenge. 
 
 ## Authors
