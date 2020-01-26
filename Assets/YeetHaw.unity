@@ -294,7 +294,7 @@ MonoBehaviour:
   objectPrefab: {fileID: 4372413084534029477, guid: d2a5981f82a9e2043b4bfc225c209b67,
     type: 3}
   center: {x: 0, y: 0, z: 0}
-  size: {x: 3, y: 3, z: 3}
+  size: {x: 0, y: 3, z: 3}
 --- !u!114 &1069312503
 MonoBehaviour:
   m_ObjectHideFlags: 0
