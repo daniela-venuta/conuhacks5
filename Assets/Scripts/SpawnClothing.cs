@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpawnClothing : MonoBehaviour
 {
@@ -8,13 +9,14 @@ public class SpawnClothing : MonoBehaviour
     public Vector3 center;
     public Vector3 size;
 
+    float timeLeft = 30.0f;
+
     // Start is called before the first frame update
     void Start()
     {
-        for(int i=0; i<3; i++)
+        for(int i=0; i<420; i++)
         {
             SpawnObject();
-            Global.counter++;
         }
         
     }
@@ -22,12 +24,19 @@ public class SpawnClothing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Global.counter < 3)
+        if(Global.counter < 420)
         {
-            SpawnObject();  
-            Global.counter++;
-        } 
+            SpawnObject();
+        }
+
+        timeLeft -= Time.deltaTime;
+        if (timeLeft < 0)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
+
+
 
     public void SpawnObject()
     {
@@ -60,4 +69,5 @@ public class SpawnClothing : MonoBehaviour
    {
       return objectPrefabArr[Random.Range(0,3)];
    }
+
 }

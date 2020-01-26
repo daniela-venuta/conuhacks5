@@ -27,8 +27,7 @@ public class LassoObject : MonoBehaviour
                 if(Physics.Raycast(ray, out hit))
                 {
                     Destroy(hit.collider.gameObject);
-                    Global.counter--;
-                    Global.pointCounter++;
+                    Score.pointCounter++;
                 }
             }
            
