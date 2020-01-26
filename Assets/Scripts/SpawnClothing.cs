@@ -14,6 +14,7 @@ public class SpawnClothing : MonoBehaviour
         for(int i=0; i<3; i++)
         {
             SpawnObject();
+            Global.counter++;
         }
         
     }
@@ -21,9 +22,10 @@ public class SpawnClothing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(GameObject.FindGameObjectsWithTag("clothing").Length < 3)
+        if(Global.counter < 3)
         {
             SpawnObject();  
+            Global.counter++;
         } 
     }
 

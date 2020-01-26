@@ -21,11 +21,14 @@ public class LassoObject : MonoBehaviour
         {
             if(GetComponent<Camera>())
             {
-                 Ray ray = GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
-                 RaycastHit hit;
+                Ray ray = GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
+
                 if(Physics.Raycast(ray, out hit))
                 {
                     Destroy(hit.collider.gameObject);
+                    Global.counter--;
+                    Global.pointCounter++;
                 }
             }
            
